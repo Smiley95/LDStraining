@@ -1,0 +1,9 @@
+C:\Users\Etaieb\Desktop\Training\ProbabilitiesTDD\Probabilities\bin\Debug\netcoreapp3.1\Probabilities.deps.json
+C:\Users\Etaieb\Desktop\Training\ProbabilitiesTDD\Probabilities\bin\Debug\netcoreapp3.1\Probabilities.dll
+C:\Users\Etaieb\Desktop\Training\ProbabilitiesTDD\Probabilities\bin\Debug\netcoreapp3.1\Probabilities.pdb
+C:\Users\Etaieb\Desktop\Training\ProbabilitiesTDD\Probabilities\obj\Debug\netcoreapp3.1\Probabilities.csprojAssemblyReference.cache
+C:\Users\Etaieb\Desktop\Training\ProbabilitiesTDD\Probabilities\obj\Debug\netcoreapp3.1\Probabilities.AssemblyInfoInputs.cache
+C:\Users\Etaieb\Desktop\Training\ProbabilitiesTDD\Probabilities\obj\Debug\netcoreapp3.1\Probabilities.AssemblyInfo.cs
+C:\Users\Etaieb\Desktop\Training\ProbabilitiesTDD\Probabilities\obj\Debug\netcoreapp3.1\Probabilities.csproj.CoreCompileInputs.cache
+C:\Users\Etaieb\Desktop\Training\ProbabilitiesTDD\Probabilities\obj\Debug\netcoreapp3.1\Probabilities.dll
+C:\Users\Etaieb\Desktop\Training\ProbabilitiesTDD\Probabilities\obj\Debug\netcoreapp3.1\Probabilities.pdb

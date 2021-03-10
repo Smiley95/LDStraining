@@ -1,0 +1,4 @@
+C:\Users\Etaieb\Desktop\Training\ProbabilityTDD\ProbabilityTest\obj\Debug\netcoreapp3.1\ProbabilityTest.csprojAssemblyReference.cache
+C:\Users\Etaieb\Desktop\Training\ProbabilityTDD\ProbabilityTest\obj\Debug\netcoreapp3.1\ProbabilityTest.AssemblyInfoInputs.cache
+C:\Users\Etaieb\Desktop\Training\ProbabilityTDD\ProbabilityTest\obj\Debug\netcoreapp3.1\ProbabilityTest.AssemblyInfo.cs
+C:\Users\Etaieb\Desktop\Training\ProbabilityTDD\ProbabilityTest\obj\Debug\netcoreapp3.1\ProbabilityTest.csproj.CoreCompileInputs.cache
