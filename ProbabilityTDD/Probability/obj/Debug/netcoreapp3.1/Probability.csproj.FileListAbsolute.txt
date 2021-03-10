@@ -1,9 +1,0 @@
-C:\Users\Etaieb\Desktop\Training\ProbabilityTDD\Probability\obj\Debug\netcoreapp3.1\Probability.AssemblyInfoInputs.cache
-C:\Users\Etaieb\Desktop\Training\ProbabilityTDD\Probability\obj\Debug\netcoreapp3.1\Probability.AssemblyInfo.cs
-C:\Users\Etaieb\Desktop\Training\ProbabilityTDD\Probability\obj\Debug\netcoreapp3.1\Probability.csproj.CoreCompileInputs.cache
-C:\Users\Etaieb\Desktop\Training\ProbabilityTDD\Probability\bin\Debug\netcoreapp3.1\Probability.deps.json
-C:\Users\Etaieb\Desktop\Training\ProbabilityTDD\Probability\bin\Debug\netcoreapp3.1\Probability.dll
-C:\Users\Etaieb\Desktop\Training\ProbabilityTDD\Probability\bin\Debug\netcoreapp3.1\Probability.pdb
-C:\Users\Etaieb\Desktop\Training\ProbabilityTDD\Probability\obj\Debug\netcoreapp3.1\Probability.dll
-C:\Users\Etaieb\Desktop\Training\ProbabilityTDD\Probability\obj\Debug\netcoreapp3.1\Probability.pdb
-C:\Users\Etaieb\Desktop\Training\ProbabilityTDD\Probability\obj\Debug\netcoreapp3.1\Probability.csprojAssemblyReference.cache
