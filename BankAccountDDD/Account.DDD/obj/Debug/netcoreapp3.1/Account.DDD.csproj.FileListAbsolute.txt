@@ -1,0 +1,14 @@
+C:\Users\Etaieb\Desktop\Training\BankAccountDDD\Account.DDD\bin\Debug\netcoreapp3.1\Account.DDD.deps.json
+C:\Users\Etaieb\Desktop\Training\BankAccountDDD\Account.DDD\bin\Debug\netcoreapp3.1\Account.DDD.dll
+C:\Users\Etaieb\Desktop\Training\BankAccountDDD\Account.DDD\bin\Debug\netcoreapp3.1\Account.DDD.pdb
+C:\Users\Etaieb\Desktop\Training\BankAccountDDD\Account.DDD\bin\Debug\netcoreapp3.1\Linedata.Foundation.Domain.Messaging.dll
+C:\Users\Etaieb\Desktop\Training\BankAccountDDD\Account.DDD\bin\Debug\netcoreapp3.1\Linedata.Foundation.Domain.Messaging.pdb
+C:\Users\Etaieb\Desktop\Training\BankAccountDDD\Account.DDD\obj\Debug\netcoreapp3.1\Account.DDD.AssemblyInfoInputs.cache
+C:\Users\Etaieb\Desktop\Training\BankAccountDDD\Account.DDD\obj\Debug\netcoreapp3.1\Account.DDD.AssemblyInfo.cs
+C:\Users\Etaieb\Desktop\Training\BankAccountDDD\Account.DDD\obj\Debug\netcoreapp3.1\Account.DDD.csproj.CoreCompileInputs.cache
+C:\Users\Etaieb\Desktop\Training\BankAccountDDD\Account.DDD\obj\Debug\netcoreapp3.1\Account.DDD.csproj.CopyComplete
+C:\Users\Etaieb\Desktop\Training\BankAccountDDD\Account.DDD\obj\Debug\netcoreapp3.1\Account.DDD.dll
+C:\Users\Etaieb\Desktop\Training\BankAccountDDD\Account.DDD\obj\Debug\netcoreapp3.1\Account.DDD.pdb
+C:\Users\Etaieb\Desktop\Training\BankAccountDDD\Account.DDD\bin\Debug\netcoreapp3.1\Linedata.Foundation.Domain.EventSourcing.dll
+C:\Users\Etaieb\Desktop\Training\BankAccountDDD\Account.DDD\bin\Debug\netcoreapp3.1\Linedata.Foundation.Domain.EventSourcing.pdb
+C:\Users\Etaieb\Desktop\Training\BankAccountDDD\Account.DDD\obj\Debug\netcoreapp3.1\Account.DDD.csprojAssemblyReference.cache

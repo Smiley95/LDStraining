@@ -1,0 +1,53 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Account.DDD/1.0.0": {
+        "dependencies": {
+          "Linedata.Foundation.Domain.EventSourcing": "1.0.0.0",
+          "Linedata.Foundation.Domain.Messaging": "1.0.0.0"
+        },
+        "runtime": {
+          "Account.DDD.dll": {}
+        }
+      },
+      "Linedata.Foundation.Domain.EventSourcing/1.0.0.0": {
+        "runtime": {
+          "Linedata.Foundation.Domain.EventSourcing.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Linedata.Foundation.Domain.Messaging/1.0.0.0": {
+        "runtime": {
+          "Linedata.Foundation.Domain.Messaging.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Account.DDD/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Linedata.Foundation.Domain.EventSourcing/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Linedata.Foundation.Domain.Messaging/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

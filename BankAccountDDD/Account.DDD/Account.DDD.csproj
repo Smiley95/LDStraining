@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Linedata.Foundation.Domain.EventSourcing">
+      <HintPath>..\..\Linedata.Foundation.Domain\src\EventSourcing\obj\Debug\netstandard2.0\Linedata.Foundation.Domain.EventSourcing.dll</HintPath>
+    </Reference>
+    <Reference Include="Linedata.Foundation.Domain.Messaging">
+      <HintPath>..\..\Linedata.Foundation.Domain\src\EventSourcing\bin\Debug\netstandard2.0\Linedata.Foundation.Domain.Messaging.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
