@@ -8,8 +8,8 @@ namespace Account.DDD.Commands
     public class DeposeCash : Command
     {
         public Guid AccountId;
-        public double Funds;
-        public DeposeCash(Guid id, double funds)
+        public decimal Funds;
+        public DeposeCash(Guid id, decimal funds)
         {
             AccountId = id;
             Funds = funds;

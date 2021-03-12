@@ -8,8 +8,8 @@ namespace Account.DDD.Commands
     public class SetOverdraftLimit : Command
     {
         public Guid AccountId;
-        public double Limit;
-        public SetOverdraftLimit(Guid id, double limit)
+        public decimal Limit;
+        public SetOverdraftLimit(Guid id, decimal limit)
         {
             AccountId = id;
             Limit = limit;

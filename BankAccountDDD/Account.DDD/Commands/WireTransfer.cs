@@ -8,8 +8,8 @@ namespace Account.DDD.Commands
     public class WireTransfer : Command
     {
         public Guid AccountId;
-        public double Funds;
-        public WireTransfer(Guid id, double funds)
+        public decimal Funds;
+        public WireTransfer(Guid id, decimal funds)
         {
             AccountId = id;
             Funds = funds;

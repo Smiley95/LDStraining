@@ -8,8 +8,8 @@ namespace Account.DDD.Events
     public class SettedWireTransferLimit : Event
     {
         public readonly Guid AccountId;
-        public readonly double NewLimit;
-        public SettedWireTransferLimit(Guid id, double newLimit)
+        public readonly decimal NewLimit;
+        public SettedWireTransferLimit(Guid id, decimal newLimit)
         {
             AccountId = id;
             NewLimit = newLimit;

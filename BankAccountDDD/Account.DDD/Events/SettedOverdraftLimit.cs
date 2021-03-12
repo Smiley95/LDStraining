@@ -8,8 +8,8 @@ namespace Account.DDD.Events
     public class SettedOverdraftLimit : Event
     {
         public readonly Guid AccountId;
-        public readonly double NewLimit;
-        public SettedOverdraftLimit(Guid id, double newLimit)
+        public readonly decimal NewLimit;
+        public SettedOverdraftLimit(Guid id, decimal newLimit)
         {
             AccountId = id;
             NewLimit = newLimit;

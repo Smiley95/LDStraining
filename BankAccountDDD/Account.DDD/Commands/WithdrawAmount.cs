@@ -8,8 +8,8 @@ namespace Account.DDD.Commands
     public class WithdrawAmount : Command
     {
         public Guid AccountId;
-        public double Funds;
-        public WithdrawAmount(Guid id, double funds)
+        public decimal Funds;
+        public WithdrawAmount(Guid id, decimal funds)
         {
             AccountId = id;
             Funds = funds;

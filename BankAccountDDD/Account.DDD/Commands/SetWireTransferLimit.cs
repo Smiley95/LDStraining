@@ -8,9 +8,9 @@ namespace Account.DDD.Commands
     public class SetWireTransferLimit : Command
     {
         public Guid AccountId;
-        public double Limit;
+        public decimal Limit;
 
-        public SetWireTransferLimit(Guid id, double limit)
+        public SetWireTransferLimit(Guid id, decimal limit)
         {
             AccountId = id;
             Limit = limit;

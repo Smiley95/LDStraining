@@ -8,9 +8,9 @@ namespace Account.DDD.Events
     public class WithdrawnAmount : Event
     {
         public readonly Guid AccountId;
-        public readonly double WithdrawnFunds;
+        public readonly decimal WithdrawnFunds;
 
-        public WithdrawnAmount(Guid accountId, double withdrawnFunds)
+        public WithdrawnAmount(Guid accountId, decimal withdrawnFunds)
         {
             AccountId = accountId;
             WithdrawnFunds = withdrawnFunds;

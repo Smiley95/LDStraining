@@ -8,8 +8,8 @@ namespace Account.DDD.Events
     public class DeposedCheque : Event
     {
         public readonly Guid AccountId;
-        public readonly double Funds;
-        public DeposedCheque(Guid accountId, double funds)
+        public readonly decimal Funds;
+        public DeposedCheque(Guid accountId, decimal funds)
         {
             AccountId = accountId;
             Funds = funds;

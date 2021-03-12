@@ -8,8 +8,8 @@ namespace Account.DDD.Events
     public class DeposedCash :Event
     {
         public readonly Guid AccountId;
-        public readonly double Funds;
-        public DeposedCash(Guid accountId, double funds)
+        public readonly decimal Funds;
+        public DeposedCash(Guid accountId, decimal funds)
         {
             AccountId = accountId;
             Funds = funds;
