@@ -8,11 +8,33 @@
     ".NETCoreApp,Version=v3.1": {
       "Account.DDD/1.0.0": {
         "dependencies": {
+          "Linedata.Foundation.EventStorage": "1.1.26",
           "Linedata.Foundation.Domain.EventSourcing": "1.0.0.0",
           "Linedata.Foundation.Domain.Messaging": "1.0.0.0"
         },
         "runtime": {
           "Account.DDD.dll": {}
+        }
+      },
+      "Linedata.Foundation.EventStorage/1.1.26": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.6.0",
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Linedata.Foundation.EventStorage.dll": {
+            "assemblyVersion": "1.1.26.0",
+            "fileVersion": "1.1.26.0"
+          }
+        }
+      },
+      "Microsoft.CSharp/4.6.0": {},
+      "Newtonsoft.Json/12.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.2.23222"
+          }
         }
       },
       "Linedata.Foundation.Domain.EventSourcing/1.0.0.0": {
@@ -38,6 +60,27 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Linedata.Foundation.EventStorage/1.1.26": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0my3qBhIybE/SUwseXP9AAxbFe6NDToZGM+3WGC13po97IDVAxDbw+VKCDDtEs2vV2nQMEKLhqhFLB3CJ69emw==",
+      "path": "linedata.foundation.eventstorage/1.1.26",
+      "hashPath": "linedata.foundation.eventstorage.1.1.26.nupkg.sha512"
+    },
+    "Microsoft.CSharp/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kxn3M2rnAGy5N5DgcIwcE8QTePWU/XiYcQVzn9HqTls2NKluVzVSmVWRjK7OUPWbljCXuZxHyhEz9kPRIQeXow==",
+      "path": "microsoft.csharp/4.6.0",
+      "hashPath": "microsoft.csharp.4.6.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
+      "path": "newtonsoft.json/12.0.2",
+      "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
     },
     "Linedata.Foundation.Domain.EventSourcing/1.0.0.0": {
       "type": "reference",

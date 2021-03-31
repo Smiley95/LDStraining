@@ -1,0 +1,81 @@
+[2021-03-23 17:29:02.558] [wrn] [Linedata.Foundation.Messaging.IdentityModel.TokenValidatorPipeline] No token validator was configured; incoming message access tokens will not be validated {  }
+[2021-03-23 17:29:02.567] [wrn] [Linedata.Foundation.Messaging.IdentityModel.TokenValidatorPipeline] No identity context accessor was configured; no identity context will be set {  }
+[2021-03-23 17:29:02.567] [wrn] [Linedata.Foundation.Messaging.IdentityModel.TokenProviderPipeline] No service credentials provider was configured; outgoing messages will not contain access tokens {  }
+[2021-03-23 17:29:02.705] [inf] [Linedata.Foundation.ServiceHosting.Microservice] Starting service Command Receiver... {  }
+[2021-03-23 17:29:02.713] [inf] [Linedata.Foundation.CommandReceiver.CommandReceiverService] Opening command receiver server endpoint at tcp://gateway-command-receiver-svc {  }
+[2021-03-23 17:29:02.852] [wrn] [Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket] Could not connect to open server socket: tcp://gateway-command-receiver-svc {  }
+NetMQ.InvalidException: TcpAddress.Resolve, delimiter (-1) must be non-negative.
+   at NetMQ.Core.Transports.Tcp.TcpAddress.Resolve(String name, Boolean ip4Only)
+   at NetMQ.Core.Transports.Tcp.TcpListener.SetAddress(String addr)
+   at NetMQ.Core.SocketBase.Bind(String addr)
+   at NetMQ.NetMQSocket.Bind(String address)
+   at Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket.OpenSocket()
+[2021-03-23 17:29:02.856] [ftl] [Linedata.Foundation.ServiceHosting.Microservice] Service Command Receiver has encountered a fatal error {  }
+Linedata.Foundation.Messaging.ConnectionException: Could not connect to open server socket: tcp://gateway-command-receiver-svc
+   at Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket.OpenSocket()
+   at Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket.ResetSocket(Boolean open, CancellationToken token)
+   at Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket.OpenAsync(CancellationToken cancellationToken)
+   at Linedata.Foundation.Messaging.Endpoints.DuplexServerEndpoint.OpenAsync(CancellationToken cancellationToken)
+   at Linedata.Foundation.CommandReceiver.CommandReceiverService.OnStartAsync(CancellationToken stoppingToken)
+   at Linedata.Foundation.ServiceHosting.Microservice.ExecuteAsync(CancellationToken stoppingToken)
+[2021-03-23 17:29:02.864] [inf] [Microsoft.Hosting.Lifetime] Application is shutting down... {  }
+[2021-03-23 17:29:02.866] [inf] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. {  }
+[2021-03-23 17:29:02.869] [inf] [Microsoft.Hosting.Lifetime] Hosting environment: Production {  }
+[2021-03-23 17:29:02.869] [inf] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Etaieb\Desktop\Training\MockOMS\CommandReceiver\bin\Debug\netcoreapp3.1 {  }
+[2021-03-23 17:29:07.890] [inf] [Microsoft.Hosting.Lifetime] Waiting for the host to be disposed. Ensure all 'IHost' instances are wrapped in 'using' blocks. {  }
+[2021-03-23 17:30:36.757] [wrn] [Linedata.Foundation.Messaging.IdentityModel.TokenValidatorPipeline] No token validator was configured; incoming message access tokens will not be validated {  }
+[2021-03-23 17:30:36.765] [wrn] [Linedata.Foundation.Messaging.IdentityModel.TokenValidatorPipeline] No identity context accessor was configured; no identity context will be set {  }
+[2021-03-23 17:30:36.766] [wrn] [Linedata.Foundation.Messaging.IdentityModel.TokenProviderPipeline] No service credentials provider was configured; outgoing messages will not contain access tokens {  }
+[2021-03-23 17:30:36.874] [inf] [Linedata.Foundation.ServiceHosting.Microservice] Starting service Command Receiver... {  }
+[2021-03-23 17:30:36.883] [inf] [Linedata.Foundation.CommandReceiver.CommandReceiverService] Opening command receiver server endpoint at tcp://gateway-command-receiver-svc {  }
+[2021-03-23 17:30:37.029] [wrn] [Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket] Could not connect to open server socket: tcp://gateway-command-receiver-svc {  }
+NetMQ.InvalidException: TcpAddress.Resolve, delimiter (-1) must be non-negative.
+   at NetMQ.Core.Transports.Tcp.TcpAddress.Resolve(String name, Boolean ip4Only)
+   at NetMQ.Core.Transports.Tcp.TcpListener.SetAddress(String addr)
+   at NetMQ.Core.SocketBase.Bind(String addr)
+   at NetMQ.NetMQSocket.Bind(String address)
+   at Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket.OpenSocket()
+[2021-03-23 17:30:37.031] [ftl] [Linedata.Foundation.ServiceHosting.Microservice] Service Command Receiver has encountered a fatal error {  }
+Linedata.Foundation.Messaging.ConnectionException: Could not connect to open server socket: tcp://gateway-command-receiver-svc
+   at Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket.OpenSocket()
+   at Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket.ResetSocket(Boolean open, CancellationToken token)
+   at Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket.OpenAsync(CancellationToken cancellationToken)
+   at Linedata.Foundation.Messaging.Endpoints.DuplexServerEndpoint.OpenAsync(CancellationToken cancellationToken)
+   at Linedata.Foundation.CommandReceiver.CommandReceiverService.OnStartAsync(CancellationToken stoppingToken)
+   at Linedata.Foundation.ServiceHosting.Microservice.ExecuteAsync(CancellationToken stoppingToken)
+[2021-03-23 17:30:37.038] [inf] [Microsoft.Hosting.Lifetime] Application is shutting down... {  }
+[2021-03-23 17:30:37.040] [inf] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. {  }
+[2021-03-23 17:30:37.042] [inf] [Microsoft.Hosting.Lifetime] Hosting environment: Production {  }
+[2021-03-23 17:30:37.042] [inf] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Etaieb\Desktop\Training\MockOMS\CommandReceiver\bin\Debug\netcoreapp3.1 {  }
+[2021-03-23 17:30:42.053] [inf] [Microsoft.Hosting.Lifetime] Waiting for the host to be disposed. Ensure all 'IHost' instances are wrapped in 'using' blocks. {  }
+[2021-03-23 17:32:39.247] [wrn] [Linedata.Foundation.Messaging.IdentityModel.TokenValidatorPipeline] No token validator was configured; incoming message access tokens will not be validated {  }
+[2021-03-23 17:32:39.258] [wrn] [Linedata.Foundation.Messaging.IdentityModel.TokenValidatorPipeline] No identity context accessor was configured; no identity context will be set {  }
+[2021-03-23 17:32:39.258] [wrn] [Linedata.Foundation.Messaging.IdentityModel.TokenProviderPipeline] No service credentials provider was configured; outgoing messages will not contain access tokens {  }
+[2021-03-23 17:40:47.811] [wrn] [Linedata.Foundation.Messaging.IdentityModel.TokenValidatorPipeline] No token validator was configured; incoming message access tokens will not be validated {  }
+[2021-03-23 17:40:47.820] [wrn] [Linedata.Foundation.Messaging.IdentityModel.TokenValidatorPipeline] No identity context accessor was configured; no identity context will be set {  }
+[2021-03-23 17:40:47.821] [wrn] [Linedata.Foundation.Messaging.IdentityModel.TokenProviderPipeline] No service credentials provider was configured; outgoing messages will not contain access tokens {  }
+[2021-03-23 17:40:47.915] [inf] [Linedata.Foundation.ServiceHosting.Microservice] Starting service Command Receiver... {  }
+[2021-03-23 17:40:47.922] [inf] [Linedata.Foundation.CommandReceiver.CommandReceiverService] Opening command receiver server endpoint at tcp://localhost:1113 {  }
+[2021-03-23 17:40:48.057] [wrn] [Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket] Could not connect to open server socket: tcp://localhost:1113 {  }
+NetMQ.AddressAlreadyInUseException: Exception of type 'NetMQ.AddressAlreadyInUseException' was thrown.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at AsyncIO.Windows.Socket.Bind(IPEndPoint localEndPoint)
+   at NetMQ.Core.Transports.Tcp.TcpListener.SetAddress(String addr)
+   --- End of inner exception stack trace ---
+   at NetMQ.Core.Transports.Tcp.TcpListener.SetAddress(String addr)
+   at NetMQ.Core.SocketBase.Bind(String addr)
+   at NetMQ.NetMQSocket.Bind(String address)
+   at Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket.OpenSocket()
+[2021-03-23 17:40:48.064] [ftl] [Linedata.Foundation.ServiceHosting.Microservice] Service Command Receiver has encountered a fatal error {  }
+Linedata.Foundation.Messaging.ConnectionException: Could not connect to open server socket: tcp://localhost:1113
+   at Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket.OpenSocket()
+   at Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket.ResetSocket(Boolean open, CancellationToken token)
+   at Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket.OpenAsync(CancellationToken cancellationToken)
+   at Linedata.Foundation.Messaging.Endpoints.DuplexServerEndpoint.OpenAsync(CancellationToken cancellationToken)
+   at Linedata.Foundation.CommandReceiver.CommandReceiverService.OnStartAsync(CancellationToken stoppingToken)
+   at Linedata.Foundation.ServiceHosting.Microservice.ExecuteAsync(CancellationToken stoppingToken)
+[2021-03-23 17:40:48.074] [inf] [Microsoft.Hosting.Lifetime] Application is shutting down... {  }
+[2021-03-23 17:40:48.076] [inf] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. {  }
+[2021-03-23 17:40:48.080] [inf] [Microsoft.Hosting.Lifetime] Hosting environment: Production {  }
+[2021-03-23 17:40:48.081] [inf] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Etaieb\Desktop\Training\MockOMS\CommandReceiver\bin\Debug\netcoreapp3.1 {  }
+[2021-03-23 17:40:53.099] [inf] [Microsoft.Hosting.Lifetime] Waiting for the host to be disposed. Ensure all 'IHost' instances are wrapped in 'using' blocks. {  }

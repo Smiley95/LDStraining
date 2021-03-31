@@ -1,0 +1,29 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.Hosting.Lifetime": "Information",
+      "Linedata.Foundation.Messaging": "Information",
+      "Steeltoe": "Information"
+    }
+  },
+
+  "SecretStore": {
+    "Provider": "mock"
+  },
+
+  "EventStorage": {
+    "Provider": "EventStore",
+    "ConnectionName": "account-event-publisher",
+    "ConnectionString": "ConnectTo=tcp://localhost:1113",
+    "UserName": "admin",
+    "Password": "changeit"
+  },
+
+  "DuplexServerEndpoints": [
+    {
+      "Name": "EventPublisher",
+      "Address": "tcp://localhost:12321"
+    }
+  ]
+}

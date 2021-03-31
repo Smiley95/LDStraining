@@ -8,9 +8,9 @@ namespace Account.DDD.Events
     public class Blocked : Event
     {
         public Guid BlockedAccount;
-        public Blocked(Guid id)
+        public Blocked(Guid blockedAccount)
         {
-            BlockedAccount = id;
+            BlockedAccount = blockedAccount;
         }
     }
 }

@@ -1,0 +1,234 @@
+2021-03-23 11:47:51.300 +01:00 [WRN] No token validator was configured; incoming message access tokens will not be validated
+2021-03-23 11:47:51.332 +01:00 [WRN] No identity context accessor was configured; no identity context will be set
+2021-03-23 11:47:51.332 +01:00 [WRN] No service credentials provider was configured; outgoing messages will not contain access tokens
+2021-03-23 11:47:52.688 +01:00 [INF] Connected to EventStore at: ConnectTo=tcp://localhost:1113
+2021-03-23 11:47:52.699 +01:00 [INF] Initializing event publisher...
+2021-03-23 11:47:52.809 +01:00 [WRN] Could not connect to open server socket: tcp://gateway-event-publisher-svc
+NetMQ.InvalidException: TcpAddress.Resolve, delimiter (-1) must be non-negative.
+   at NetMQ.Core.Transports.Tcp.TcpAddress.Resolve(String name, Boolean ip4Only)
+   at NetMQ.Core.Transports.Tcp.TcpListener.SetAddress(String addr)
+   at NetMQ.Core.SocketBase.Bind(String addr)
+   at NetMQ.NetMQSocket.Bind(String address)
+   at Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket.OpenSocket()
+2021-03-23 11:47:52.859 +01:00 [INF] Event Publisher is stopping ...
+2021-03-23 11:53:12.145 +01:00 [WRN] No token validator was configured; incoming message access tokens will not be validated
+2021-03-23 11:53:12.172 +01:00 [WRN] No identity context accessor was configured; no identity context will be set
+2021-03-23 11:53:12.172 +01:00 [WRN] No service credentials provider was configured; outgoing messages will not contain access tokens
+2021-03-23 11:53:12.895 +01:00 [INF] Connected to EventStore at: ConnectTo=tcp://localhost:1113
+2021-03-23 11:53:12.903 +01:00 [INF] Initializing event publisher...
+2021-03-23 11:53:13.009 +01:00 [WRN] Could not connect to open server socket: tcp://gateway-event-publisher-svc
+NetMQ.InvalidException: TcpAddress.Resolve, delimiter (-1) must be non-negative.
+   at NetMQ.Core.Transports.Tcp.TcpAddress.Resolve(String name, Boolean ip4Only)
+   at NetMQ.Core.Transports.Tcp.TcpListener.SetAddress(String addr)
+   at NetMQ.Core.SocketBase.Bind(String addr)
+   at NetMQ.NetMQSocket.Bind(String address)
+   at Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket.OpenSocket()
+2021-03-23 11:53:13.132 +01:00 [INF] Event Publisher is stopping ...
+2021-03-23 11:55:44.452 +01:00 [WRN] No token validator was configured; incoming message access tokens will not be validated
+2021-03-23 11:55:44.483 +01:00 [WRN] No identity context accessor was configured; no identity context will be set
+2021-03-23 11:55:44.484 +01:00 [WRN] No service credentials provider was configured; outgoing messages will not contain access tokens
+2021-03-23 11:55:45.458 +01:00 [INF] Connected to EventStore at: ConnectTo=tcp://localhost:1113
+2021-03-23 11:55:45.466 +01:00 [INF] Initializing event publisher...
+2021-03-23 11:55:45.564 +01:00 [WRN] Could not connect to open server socket: tcp://gateway-event-publisher-svc
+NetMQ.InvalidException: TcpAddress.Resolve, delimiter (-1) must be non-negative.
+   at NetMQ.Core.Transports.Tcp.TcpAddress.Resolve(String name, Boolean ip4Only)
+   at NetMQ.Core.Transports.Tcp.TcpListener.SetAddress(String addr)
+   at NetMQ.Core.SocketBase.Bind(String addr)
+   at NetMQ.NetMQSocket.Bind(String address)
+   at Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket.OpenSocket()
+2021-03-23 11:55:45.599 +01:00 [INF] Event Publisher is stopping ...
+2021-03-23 11:57:38.338 +01:00 [WRN] No token validator was configured; incoming message access tokens will not be validated
+2021-03-23 11:57:38.363 +01:00 [WRN] No identity context accessor was configured; no identity context will be set
+2021-03-23 11:57:38.363 +01:00 [WRN] No service credentials provider was configured; outgoing messages will not contain access tokens
+2021-03-23 11:57:39.112 +01:00 [INF] Connected to EventStore at: ConnectTo=tcp://localhost:1113
+2021-03-23 11:57:39.123 +01:00 [INF] Initializing event publisher...
+2021-03-23 11:57:39.216 +01:00 [WRN] Could not connect to open server socket: tcp://gateway-event-publisher-svc
+NetMQ.InvalidException: TcpAddress.Resolve, delimiter (-1) must be non-negative.
+   at NetMQ.Core.Transports.Tcp.TcpAddress.Resolve(String name, Boolean ip4Only)
+   at NetMQ.Core.Transports.Tcp.TcpListener.SetAddress(String addr)
+   at NetMQ.Core.SocketBase.Bind(String addr)
+   at NetMQ.NetMQSocket.Bind(String address)
+   at Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket.OpenSocket()
+2021-03-23 11:57:39.263 +01:00 [INF] Event Publisher is stopping ...
+2021-03-24 11:42:36.346 +01:00 [WRN] No token validator was configured; incoming message access tokens will not be validated
+2021-03-24 11:42:36.374 +01:00 [WRN] No identity context accessor was configured; no identity context will be set
+2021-03-24 11:42:36.375 +01:00 [WRN] No service credentials provider was configured; outgoing messages will not contain access tokens
+2021-03-24 11:43:32.633 +01:00 [WRN] No token validator was configured; incoming message access tokens will not be validated
+2021-03-24 11:43:32.658 +01:00 [WRN] No identity context accessor was configured; no identity context will be set
+2021-03-24 11:43:32.658 +01:00 [WRN] No service credentials provider was configured; outgoing messages will not contain access tokens
+2021-03-24 11:43:33.588 +01:00 [INF] Connected to EventStore at: ConnectTo=tcp://localhost:1113
+2021-03-24 11:43:33.596 +01:00 [INF] Initializing event publisher...
+2021-03-24 11:43:33.678 +01:00 [WRN] Could not connect to open server socket: tcp://account-event-publisher-svc
+NetMQ.InvalidException: TcpAddress.Resolve, delimiter (-1) must be non-negative.
+   at NetMQ.Core.Transports.Tcp.TcpAddress.Resolve(String name, Boolean ip4Only)
+   at NetMQ.Core.Transports.Tcp.TcpListener.SetAddress(String addr)
+   at NetMQ.Core.SocketBase.Bind(String addr)
+   at NetMQ.NetMQSocket.Bind(String address)
+   at Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket.OpenSocket()
+2021-03-24 11:43:33.701 +01:00 [INF] Event Publisher is stopping ...
+2021-03-24 11:48:33.836 +01:00 [WRN] No token validator was configured; incoming message access tokens will not be validated
+2021-03-24 11:48:33.859 +01:00 [WRN] No identity context accessor was configured; no identity context will be set
+2021-03-24 11:48:33.860 +01:00 [WRN] No service credentials provider was configured; outgoing messages will not contain access tokens
+2021-03-24 11:48:34.499 +01:00 [INF] Connected to EventStore at: ConnectTo=tcp://localhost:1113
+2021-03-24 11:48:34.510 +01:00 [INF] Initializing event publisher...
+2021-03-24 11:48:34.620 +01:00 [WRN] Could not connect to open server socket: tcp://account-event-publisher-svc
+NetMQ.InvalidException: TcpAddress.Resolve, delimiter (-1) must be non-negative.
+   at NetMQ.Core.Transports.Tcp.TcpAddress.Resolve(String name, Boolean ip4Only)
+   at NetMQ.Core.Transports.Tcp.TcpListener.SetAddress(String addr)
+   at NetMQ.Core.SocketBase.Bind(String addr)
+   at NetMQ.NetMQSocket.Bind(String address)
+   at Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket.OpenSocket()
+2021-03-24 11:48:34.667 +01:00 [INF] Event Publisher is stopping ...
+2021-03-24 13:09:10.007 +01:00 [WRN] No token validator was configured; incoming message access tokens will not be validated
+2021-03-24 13:09:10.035 +01:00 [WRN] No identity context accessor was configured; no identity context will be set
+2021-03-24 13:09:10.036 +01:00 [WRN] No service credentials provider was configured; outgoing messages will not contain access tokens
+2021-03-24 13:09:10.675 +01:00 [INF] Connected to EventStore at: ConnectTo=tcp://localhost:1113
+2021-03-24 13:09:10.687 +01:00 [INF] Initializing event publisher...
+2021-03-24 13:09:10.796 +01:00 [WRN] Could not connect to open server socket: tcp://gateway-event-publisher-svc
+NetMQ.InvalidException: TcpAddress.Resolve, delimiter (-1) must be non-negative.
+   at NetMQ.Core.Transports.Tcp.TcpAddress.Resolve(String name, Boolean ip4Only)
+   at NetMQ.Core.Transports.Tcp.TcpListener.SetAddress(String addr)
+   at NetMQ.Core.SocketBase.Bind(String addr)
+   at NetMQ.NetMQSocket.Bind(String address)
+   at Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket.OpenSocket()
+2021-03-24 13:09:10.983 +01:00 [INF] Event Publisher is stopping ...
+2021-03-24 13:10:14.270 +01:00 [WRN] No token validator was configured; incoming message access tokens will not be validated
+2021-03-24 13:10:14.289 +01:00 [WRN] No identity context accessor was configured; no identity context will be set
+2021-03-24 13:10:14.289 +01:00 [WRN] No service credentials provider was configured; outgoing messages will not contain access tokens
+2021-03-24 13:10:14.867 +01:00 [INF] Connected to EventStore at: ConnectTo=tcp://localhost:1113
+2021-03-24 13:10:14.875 +01:00 [INF] Initializing event publisher...
+2021-03-24 13:10:14.977 +01:00 [WRN] Could not connect to open server socket: tcp://gateway-event-publisher-svc
+NetMQ.InvalidException: TcpAddress.Resolve, delimiter (-1) must be non-negative.
+   at NetMQ.Core.Transports.Tcp.TcpAddress.Resolve(String name, Boolean ip4Only)
+   at NetMQ.Core.Transports.Tcp.TcpListener.SetAddress(String addr)
+   at NetMQ.Core.SocketBase.Bind(String addr)
+   at NetMQ.NetMQSocket.Bind(String address)
+   at Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket.OpenSocket()
+2021-03-24 13:10:15.043 +01:00 [INF] Event Publisher is stopping ...
+2021-03-24 13:16:14.736 +01:00 [WRN] No token validator was configured; incoming message access tokens will not be validated
+2021-03-24 13:16:14.760 +01:00 [WRN] No identity context accessor was configured; no identity context will be set
+2021-03-24 13:16:14.760 +01:00 [WRN] No service credentials provider was configured; outgoing messages will not contain access tokens
+2021-03-24 13:16:15.328 +01:00 [INF] Connected to EventStore at: ConnectTo=tcp://localhost:1113
+2021-03-24 13:16:15.336 +01:00 [INF] Initializing event publisher...
+2021-03-24 13:16:15.416 +01:00 [WRN] Could not connect to open server socket: tcp://account-event-publisher-svc
+NetMQ.InvalidException: TcpAddress.Resolve, delimiter (-1) must be non-negative.
+   at NetMQ.Core.Transports.Tcp.TcpAddress.Resolve(String name, Boolean ip4Only)
+   at NetMQ.Core.Transports.Tcp.TcpListener.SetAddress(String addr)
+   at NetMQ.Core.SocketBase.Bind(String addr)
+   at NetMQ.NetMQSocket.Bind(String address)
+   at Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket.OpenSocket()
+2021-03-24 13:16:15.470 +01:00 [INF] Event Publisher is stopping ...
+2021-03-24 13:23:19.238 +01:00 [WRN] No token validator was configured; incoming message access tokens will not be validated
+2021-03-24 13:23:19.263 +01:00 [WRN] No identity context accessor was configured; no identity context will be set
+2021-03-24 13:23:19.264 +01:00 [WRN] No service credentials provider was configured; outgoing messages will not contain access tokens
+2021-03-24 13:23:19.983 +01:00 [INF] Connected to EventStore at: ConnectTo=tcp://localhost:1113
+2021-03-24 13:23:19.992 +01:00 [INF] Initializing event publisher...
+2021-03-24 13:48:38.434 +01:00 [WRN] No token validator was configured; incoming message access tokens will not be validated
+2021-03-24 13:48:38.460 +01:00 [WRN] No identity context accessor was configured; no identity context will be set
+2021-03-24 13:48:38.461 +01:00 [WRN] No service credentials provider was configured; outgoing messages will not contain access tokens
+2021-03-24 13:48:39.122 +01:00 [INF] Connected to EventStore at: ConnectTo=tcp://localhost:1113
+2021-03-24 13:48:39.130 +01:00 [INF] Initializing event publisher...
+2021-03-24 13:48:39.255 +01:00 [WRN] Could not connect to open server socket: tcp://gateway-event-publisher-svc
+NetMQ.InvalidException: TcpAddress.Resolve, delimiter (-1) must be non-negative.
+   at NetMQ.Core.Transports.Tcp.TcpAddress.Resolve(String name, Boolean ip4Only)
+   at NetMQ.Core.Transports.Tcp.TcpListener.SetAddress(String addr)
+   at NetMQ.Core.SocketBase.Bind(String addr)
+   at NetMQ.NetMQSocket.Bind(String address)
+   at Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket.OpenSocket()
+2021-03-24 13:48:39.301 +01:00 [INF] Event Publisher is stopping ...
+2021-03-24 13:57:42.610 +01:00 [WRN] No token validator was configured; incoming message access tokens will not be validated
+2021-03-24 13:57:42.641 +01:00 [WRN] No identity context accessor was configured; no identity context will be set
+2021-03-24 13:57:42.641 +01:00 [WRN] No service credentials provider was configured; outgoing messages will not contain access tokens
+2021-03-24 13:57:43.338 +01:00 [INF] Connected to EventStore at: ConnectTo=tcp://localhost:1113
+2021-03-24 13:57:43.350 +01:00 [INF] Initializing event publisher...
+2021-03-24 13:57:43.519 +01:00 [INF] Subscribing to event provider...
+2021-03-24 13:57:43.522 +01:00 [INF] Subscribing to $all
+2021-03-24 14:31:42.844 +01:00 [WRN] No token validator was configured; incoming message access tokens will not be validated
+2021-03-24 14:31:42.867 +01:00 [WRN] No identity context accessor was configured; no identity context will be set
+2021-03-24 14:31:42.868 +01:00 [WRN] No service credentials provider was configured; outgoing messages will not contain access tokens
+2021-03-24 14:31:43.397 +01:00 [INF] Connected to EventStore at: ConnectTo=tcp://localhost:1113
+2021-03-24 14:31:43.406 +01:00 [INF] Initializing event publisher...
+2021-03-24 14:31:43.509 +01:00 [INF] Subscribing to event provider...
+2021-03-24 14:31:43.511 +01:00 [INF] Subscribing to $all
+2021-03-24 15:15:57.809 +01:00 [WRN] No token validator was configured; incoming message access tokens will not be validated
+2021-03-24 15:15:57.838 +01:00 [WRN] No identity context accessor was configured; no identity context will be set
+2021-03-24 15:15:57.838 +01:00 [WRN] No service credentials provider was configured; outgoing messages will not contain access tokens
+2021-03-24 15:15:58.464 +01:00 [INF] Connected to EventStore at: ConnectTo=tcp://localhost:1113
+2021-03-24 15:15:58.475 +01:00 [INF] Initializing event publisher...
+2021-03-24 15:15:58.572 +01:00 [INF] Subscribing to event provider...
+2021-03-24 15:15:58.573 +01:00 [INF] Subscribing to $all
+2021-03-24 15:16:55.842 +01:00 [INF] Cancellation token set, closing down subscription to event provider
+2021-03-24 15:16:55.842 +01:00 [INF] $all subscription DROPPED because "UserInitiated" null
+2021-03-24 15:16:55.844 +01:00 [INF] Event Publisher is stopping ...
+2021-03-29 09:11:25.606 +01:00 [WRN] No token validator was configured; incoming message access tokens will not be validated
+2021-03-29 09:11:25.664 +01:00 [WRN] No identity context accessor was configured; no identity context will be set
+2021-03-29 09:11:25.665 +01:00 [WRN] No service credentials provider was configured; outgoing messages will not contain access tokens
+2021-03-29 09:11:26.305 +01:00 [INF] Connected to EventStore at: ConnectTo=tcp://localhost:1113
+2021-03-29 09:11:26.313 +01:00 [INF] Initializing event publisher...
+2021-03-29 09:11:26.412 +01:00 [INF] Subscribing to event provider...
+2021-03-29 09:11:26.935 +01:00 [INF] Subscribing to $all
+2021-03-29 17:26:48.836 +01:00 [WRN] No token validator was configured; incoming message access tokens will not be validated
+2021-03-29 17:26:48.859 +01:00 [WRN] No identity context accessor was configured; no identity context will be set
+2021-03-29 17:26:48.859 +01:00 [WRN] No service credentials provider was configured; outgoing messages will not contain access tokens
+2021-03-29 17:26:49.604 +01:00 [INF] Connected to EventStore at: ConnectTo=tcp://localhost:1113
+2021-03-29 17:26:49.615 +01:00 [INF] Initializing event publisher...
+2021-03-29 17:26:49.744 +01:00 [WRN] Could not connect to open server socket: tcp://localhost:12321
+NetMQ.AddressAlreadyInUseException: Exception of type 'NetMQ.AddressAlreadyInUseException' was thrown.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at AsyncIO.Windows.Socket.Bind(IPEndPoint localEndPoint)
+   at NetMQ.Core.Transports.Tcp.TcpListener.SetAddress(String addr)
+   --- End of inner exception stack trace ---
+   at NetMQ.Core.Transports.Tcp.TcpListener.SetAddress(String addr)
+   at NetMQ.Core.SocketBase.Bind(String addr)
+   at NetMQ.NetMQSocket.Bind(String address)
+   at Linedata.Foundation.Messaging.Transport.ZeroMq.DuplexServerSocket.OpenSocket()
+2021-03-29 17:26:49.806 +01:00 [INF] Event Publisher is stopping ...
+2021-03-29 17:27:09.307 +01:00 [WRN] No token validator was configured; incoming message access tokens will not be validated
+2021-03-29 17:27:09.329 +01:00 [WRN] No identity context accessor was configured; no identity context will be set
+2021-03-29 17:27:09.329 +01:00 [WRN] No service credentials provider was configured; outgoing messages will not contain access tokens
+2021-03-29 17:27:10.007 +01:00 [INF] Connected to EventStore at: ConnectTo=tcp://localhost:1113
+2021-03-29 17:27:10.015 +01:00 [INF] Initializing event publisher...
+2021-03-29 17:27:10.116 +01:00 [INF] Subscribing to event provider...
+2021-03-29 17:27:10.118 +01:00 [INF] Subscribing to $all
+2021-03-29 17:54:56.785 +01:00 [INF] Cancellation token set, closing down subscription to event provider
+2021-03-29 17:54:56.785 +01:00 [INF] $all subscription DROPPED because "UserInitiated" null
+2021-03-29 17:54:56.787 +01:00 [INF] Event Publisher is stopping ...
+2021-03-31 14:33:32.958 +01:00 [WRN] No token validator was configured; incoming message access tokens will not be validated
+2021-03-31 14:33:32.977 +01:00 [WRN] No identity context accessor was configured; no identity context will be set
+2021-03-31 14:33:33.466 +01:00 [WRN] No service credentials provider was configured; outgoing messages will not contain access tokens
+2021-03-31 14:34:08.257 +01:00 [WRN] No token validator was configured; incoming message access tokens will not be validated
+2021-03-31 14:34:08.276 +01:00 [WRN] No identity context accessor was configured; no identity context will be set
+2021-03-31 14:34:08.276 +01:00 [WRN] No service credentials provider was configured; outgoing messages will not contain access tokens
+2021-03-31 14:35:11.167 +01:00 [WRN] No token validator was configured; incoming message access tokens will not be validated
+2021-03-31 14:35:11.186 +01:00 [WRN] No identity context accessor was configured; no identity context will be set
+2021-03-31 14:35:11.186 +01:00 [WRN] No service credentials provider was configured; outgoing messages will not contain access tokens
+2021-03-31 14:35:11.996 +01:00 [INF] Connected to EventStore at: ConnectTo=tcp://localhost:1113
+2021-03-31 14:35:12.005 +01:00 [INF] Initializing event publisher...
+2021-03-31 14:35:12.136 +01:00 [INF] Subscribing to event provider...
+2021-03-31 14:35:12.139 +01:00 [INF] Subscribing to $all
+2021-03-31 14:35:52.144 +01:00 [INF] $all subscription DROPPED because "ConnectionClosed" EventStore.ClientAPI.Exceptions.ConnectionClosedException: Connection was closed.
+2021-03-31 14:35:52.167 +01:00 [WRN] Error encountered subscribing to event provider; restarting subscription
+EventStore.ClientAPI.Exceptions.ConnectionClosedException: Connection was closed.
+   at Linedata.Foundation.EventPublisher.EventStoreEventProvider.SubscribeAsync(IEventHandler`1 eventHandler, CancellationToken cancellationToken)
+   at Linedata.Foundation.EventPublisher.EventPublisherService.ExecuteAsync(CancellationToken stoppingToken)
+2021-03-31 14:35:52.202 +01:00 [INF] Subscribing to $all
+2021-03-31 14:36:10.048 +01:00 [INF] Cancellation token set, closing down subscription to event provider
+2021-03-31 14:36:10.048 +01:00 [INF] $all subscription DROPPED because "UserInitiated" null
+2021-03-31 14:36:10.051 +01:00 [INF] Event Publisher is stopping ...
+2021-03-31 14:36:29.168 +01:00 [WRN] No token validator was configured; incoming message access tokens will not be validated
+2021-03-31 14:36:29.189 +01:00 [WRN] No identity context accessor was configured; no identity context will be set
+2021-03-31 14:36:29.189 +01:00 [WRN] No service credentials provider was configured; outgoing messages will not contain access tokens
+2021-03-31 14:36:29.741 +01:00 [INF] Connected to EventStore at: ConnectTo=tcp://localhost:1113
+2021-03-31 14:36:29.749 +01:00 [INF] Initializing event publisher...
+2021-03-31 14:36:29.836 +01:00 [INF] Subscribing to event provider...
+2021-03-31 14:36:29.838 +01:00 [INF] Subscribing to $all
+2021-03-31 14:36:37.851 +01:00 [INF] Cancellation token set, closing down subscription to event provider
+2021-03-31 14:36:37.852 +01:00 [INF] $all subscription DROPPED because "UserInitiated" null
+2021-03-31 14:36:37.853 +01:00 [INF] Event Publisher is stopping ...
+2021-03-31 14:37:07.390 +01:00 [WRN] No token validator was configured; incoming message access tokens will not be validated
+2021-03-31 14:37:07.415 +01:00 [WRN] No identity context accessor was configured; no identity context will be set
+2021-03-31 14:37:07.416 +01:00 [WRN] No service credentials provider was configured; outgoing messages will not contain access tokens
+2021-03-31 14:37:08.065 +01:00 [INF] Connected to EventStore at: ConnectTo=tcp://localhost:1113
+2021-03-31 14:37:08.074 +01:00 [INF] Initializing event publisher...
+2021-03-31 14:37:08.192 +01:00 [INF] Subscribing to event provider...
+2021-03-31 14:37:08.195 +01:00 [INF] Subscribing to $all

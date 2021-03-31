@@ -3,21 +3,45 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Threading.Tasks;
-using TestAccount = Account.DDD.AccountAggregate.Account;
+using Account.DDD.Commands;
+using TestAccount = Account.DDD.AccountAggregate.BankAccount;
 using Account.DDD.Events;
+using Linedata.Foundation.Domain.EventSourcing;
+using Linedata.Foundation.Domain.Messaging;
+using Linedata.Foundation.EventStorage;
+using Linedata.Foundation.EventStorage.InMemory;
+using Newtonsoft.Json;
 using Xunit;
 
 namespace Account.DDD.Test
 {
     public class AccountTest
     {
+
+        private InMemoryEventStore _mockStore;
+        private IStreamStoreConnection _mockStoreConnection;
+        private StreamStoreRepository _repo;
+        private AccountHandler _service;
+
+        public AccountTest()
+        {
+            _mockStore = new InMemoryEventStore();
+            _mockStoreConnection = _mockStore.Connect("Accounts");
+            var eventSerializer = new JsonEventSerializer();
+            _repo = new StreamStoreRepository(new PrefixedCamelCaseStreamNameBuilder(), _mockStoreConnection, eventSerializer);
+            _service = new AccountHandler(_repo);
+
+        }
         [Trait("Category","Initiation")]
         [Fact]
         public void Can_create_an_account()
         {
             var id = Guid.NewGuid();
             var holder = "someone";
-            Assert.NotNull(new TestAccount(id, holder, new AccountCreated(id,holder)));
+            var command = new CreateAccount(id, holder);
+            var reply = _service.Handle(command);
+            Assert.Equal(typeof(Success), reply.GetType());
+            Assert.True(_repo.TryGetById(command.AccountId,out TestAccount account));
         }
 
         [Trait("Category", "Initiation")]
@@ -34,10 +58,11 @@ namespace Account.DDD.Test
         public void Can_block_Account()
         {
             var id = Guid.NewGuid();
-            var account = new TestAccount(id, "holder", new AccountCreated(id, "holder"));
-            Assert.False(account.Blocked);
-            account.Block(new Blocked(account.AccountId));
-            Assert.True(account.Blocked);
+            var createCommand = new CreateAccount(id, "someone");
+            var reply = _service.Handle(createCommand);
+            var account = _repo.GetById<TestAccount>(id);
+            var blockCommand = new BlockAccount(id);
+            Assert.Equal(typeof(Success), _service.Handle(blockCommand).GetType());
         }
 
         [Trait("Category", "BlockStatus")]
@@ -45,11 +70,10 @@ namespace Account.DDD.Test
         public void Can_unblock_Account()
         {
             var id = Guid.NewGuid();
-            var account = new TestAccount(id, "holder", new AccountCreated(id, "holder"));
-            account.Block(new Blocked(account.AccountId));
-            Assert.True(account.Blocked);
-            account.Unblock(new Unblocked(account.AccountId));
-            Assert.False(account.Blocked);
+            var createCommand = new CreateAccount(id, "someone");
+            var reply = _service.Handle(createCommand);
+            var unblockCommand = new UnblockAccount(id);
+            Assert.Equal(typeof(Success), _service.Handle(unblockCommand).GetType());
         }
 
         [Trait("Category", "BlockStatus")]
@@ -57,10 +81,9 @@ namespace Account.DDD.Test
         public void Can_block_when_withdraw()
         {
             var id = Guid.NewGuid();
-            var account = new TestAccount(id, "holder", new AccountCreated(id, "holder"));
-            account.Amount = 250;
-            account.WithdrawCash(300, new WithdrawnAmount(id, 300));
-            Assert.True(account.Blocked);
+            var reply = _service.Handle(new CreateAccount(id, "someone"));
+            reply = _service.Handle(new DeposeCash(id,250));
+            Assert.Equal(typeof(Success), _service.Handle(new WithdrawAmount(id,300)).GetType());
         }
 
         [Trait("Category", "BlockStatus")]
@@ -68,11 +91,10 @@ namespace Account.DDD.Test
         public void Can_block_through_wire_transferring()
         {
             var id = Guid.NewGuid();
-            var account = new TestAccount(id, "holder", new AccountCreated(id, "holder"));
-            account.Amount = 250;
-            account.SetDailyWireTransferLimit(100, new SettedWireTransferLimit(id,100));
-            account.TransferWire(300, new WireTransferred(id, 300));
-            Assert.True(account.Blocked);
+            var reply = _service.Handle(new CreateAccount(id, "someone"));
+            reply = _service.Handle(new DeposeCash(id, 250));
+            reply = _service.Handle(new SetWireTransferLimit(id, 100));
+            Assert.Equal(typeof(Success), _service.Handle(new WireTransfer(id, 300)).GetType());
         }
 
         [Trait("Category", "BlockStatus")]
@@ -80,12 +102,10 @@ namespace Account.DDD.Test
         public void Can_unblock_when_depose_cash()
         {
             var id = Guid.NewGuid();
-            var account = new TestAccount(id, "holder", new AccountCreated(id, "holder"));
-            account.Amount = 250;
-            account.WithdrawCash(300, new WithdrawnAmount(id, 300));
-            account.DeposeCash(150, new DeposedCash(id,150));
-            Assert.Equal(400, account.Amount);
-            Assert.False(account.Blocked);
+            var reply = _service.Handle(new CreateAccount(id, "someone"));
+            reply = _service.Handle(new DeposeCash(id, 250));
+            reply = _service.Handle(new BlockAccount(id));
+            Assert.Equal(typeof(Success), _service.Handle(new DeposeCash(id, 150)).GetType());
         }
 
         [Trait("Category", "BlockStatus")]
@@ -93,12 +113,10 @@ namespace Account.DDD.Test
         public async Task Can_unblock_when_depose_cheque()
         {
             var id = Guid.NewGuid();
-            var account = new TestAccount(id, "holder", new AccountCreated(id, "holder"));
-            account.Amount = 250;
-            account.WithdrawCash(300, new WithdrawnAmount(id, 300));
-            await account.DeposeCheque(150, new DeposedCheque(id, 150));
-            Assert.Equal(400, account.Amount);
-            Assert.False(account.Blocked);
+            var reply = _service.Handle(new CreateAccount(id, "someone"));
+            reply = _service.Handle(new DeposeCash(id, 250));
+            reply = _service.Handle(new BlockAccount(id));
+            Assert.Equal(typeof(Success), _service.Handle(new DeposeCheque(id, 150)).GetType());
         }
 
         [Trait("Category", "LimitsUpdating")]
@@ -106,10 +124,8 @@ namespace Account.DDD.Test
         public void Can_set_overdraft_limit()
         {
             var id = Guid.NewGuid();
-            var account = new TestAccount(id, "holder", new AccountCreated(id, "holder"));
-            Assert.Equal(0,account.OverdraftLimit);
-            account.SetOverdraftLimit(250,new SettedOverdraftLimit(id,250));
-            Assert.Equal(250, account.OverdraftLimit);
+            var reply = _service.Handle(new CreateAccount(id, "someone"));
+            Assert.Equal(typeof(Success), _service.Handle(new SetOverdraftLimit(id, 100)).GetType());// can add other check through the block and withdraw 
         }
 
         [Trait("Category", "LimitsUpdating")]
@@ -117,10 +133,10 @@ namespace Account.DDD.Test
         public void Can_set_daily_wire_transfer_limit()
         {
             var id = Guid.NewGuid();
-            var account = new TestAccount(id, "holder", new AccountCreated(id, "holder"));
-            Assert.Equal(0, account.DailyWireTransferLimit);
-            account.SetDailyWireTransferLimit(250, new SettedWireTransferLimit(id, 250));
-            Assert.Equal(250, account.DailyWireTransferLimit);
+            var reply = _service.Handle(new CreateAccount(id, "someone"));
+            reply = _service.Handle(new DeposeCash(id, 250));
+            Assert.Equal(typeof(Success), _service.Handle(new SetWireTransferLimit(id, 100)).GetType());// can add other check through the block and withdraw 
+            
         }
 
         [Trait("Category", "LimitsUpdating")]
@@ -128,9 +144,9 @@ namespace Account.DDD.Test
         public void Cannot_set_invalid_limit()
         {
             var id = Guid.NewGuid();
-            var account = new TestAccount(id, "holder", new AccountCreated(id, "holder"));
-            Assert.Throws<ArgumentException>(() => account.SetDailyWireTransferLimit(-120, new SettedWireTransferLimit(id,-120)));
-            Assert.Throws<ArgumentException>(() => account.SetOverdraftLimit(-450, new SettedOverdraftLimit(id,-450)));
+            var reply = _service.Handle(new CreateAccount(id, "someone"));
+            Assert.Throws<ArgumentException>(() => _service.Handle(new SetWireTransferLimit(id, -100)));
+            Assert.Throws<ArgumentException>(() => _service.Handle(new SetOverdraftLimit(id, -120)));
         }
 
         [Trait("Category", "Deposing")]
@@ -138,10 +154,8 @@ namespace Account.DDD.Test
         public void Can_depose_cash()
         {
             var id = Guid.NewGuid();
-            var account = new TestAccount(id, "holder", new AccountCreated(id, "holder"));
-            Assert.Equal(0, account.Amount);
-            account.DeposeCash(400, new DeposedCash(id,400));
-            Assert.Equal(400, account.Amount);
+            var reply = _service.Handle(new CreateAccount(id, "someone"));
+            Assert.Equal(typeof(Success), _service.Handle(new DeposeCash(id, 100)).GetType());
         }
 
         [Trait("Category", "Deposing")]
@@ -149,10 +163,8 @@ namespace Account.DDD.Test
         public async Task Can_depose_cheque()
         {
             var id = Guid.NewGuid();
-            var account = new TestAccount(id, "holder", new AccountCreated(id, "holder"));
-            Assert.Equal(0, account.Amount);
-            await account.DeposeCheque(400, new DeposedCheque(id, 400));
-            Assert.Equal(400, account.Amount);
+            var reply = _service.Handle(new CreateAccount(id, "someone"));
+            Assert.Equal(typeof(Success), _service.Handle(new DeposeCheque(id, 100)).GetType());
         }
 
         [Trait("Category", "Deposing")]
@@ -160,10 +172,10 @@ namespace Account.DDD.Test
         public void Cannot_depose_invalid_amount_of_cash()
         {
             var id = Guid.NewGuid();
-            var account = new TestAccount(id, "holder", new AccountCreated(id, "holder"));
-            Assert.Equal(0, account.Amount);
-            Assert.Throws<ArgumentException>(() => account.DeposeCash(0, new DeposedCash(id, 0)));
-            Assert.Throws<ArgumentException>(() => account.DeposeCash(-120, new DeposedCash(id, -120)));
+            var reply = _service.Handle(new CreateAccount(id, "someone"));
+            Assert.Equal(typeof(Success), _service.Handle(new DeposeCheque(id, 100)).GetType());
+            Assert.Throws<ArgumentException>(() => _service.Handle(new DeposeCash(id, 0)));
+            Assert.Throws<ArgumentException>(() => _service.Handle(new DeposeCash(id, -120)));
         }
 
         [Trait("Category", "Deposing")]
@@ -171,10 +183,11 @@ namespace Account.DDD.Test
         public void Cannot_depose_while_account_is_blocked()
         {
             var id = Guid.NewGuid();
-            var account = new TestAccount(id, "holder", new AccountCreated(id, "holder"));
-            account.Amount = -200;
-            account.Block(new Blocked(id));
-            Assert.Throws<ArgumentException>(() => account.DeposeCash(100, new DeposedCash(id, 100)));
+            var reply = _service.Handle(new CreateAccount(id, "someone"));
+            Assert.Equal(typeof(Success), _service.Handle(new DeposeCash(id, 100)).GetType());
+            Assert.Equal(typeof(Success), _service.Handle(new WithdrawAmount(id, 200)).GetType());
+            Assert.Equal(typeof(Success), _service.Handle(new BlockAccount(id)).GetType());
+            Assert.Throws<ArgumentException>(() => _service.Handle(new DeposeCash(id, 50)));
         }
 
         [Trait("Category", "Deposing")]
@@ -182,9 +195,9 @@ namespace Account.DDD.Test
         public async Task Cannot_depose_invalid_cheque_amount()
         {
             var id = Guid.NewGuid();
-            var account = new TestAccount(id, "holder", new AccountCreated(id, "holder"));
-            await Assert.ThrowsAsync<ArgumentException>(() => account.DeposeCheque(0, new DeposedCheque(id, 0)));
-            await Assert.ThrowsAsync<ArgumentException>(() => account.DeposeCheque(-120, new DeposedCheque(id, -120)));
+            var reply = _service.Handle(new CreateAccount(id, "someone"));
+            Assert.Throws<AggregateException>( () => _service.Handle(new DeposeCheque(id, 0)));
+            Assert.Throws<AggregateException>(() => _service.Handle(new DeposeCheque(id, -120)));
         }
 
         [Trait("Category", "Deposing")]
@@ -192,11 +205,11 @@ namespace Account.DDD.Test
         public async Task Cannot_depose_cheque_to_blocked_account()
         {
             var id = Guid.NewGuid();
-            var account = new TestAccount(id, "holder", new AccountCreated(id, "holder"));
-            account.Amount = -250;
-            account.Block(new Blocked(id));
-            Assert.True(account.Blocked);
-            await Assert.ThrowsAsync<ArgumentException>(() => account.DeposeCheque(100, new DeposedCheque(id, 100)));
+            var reply = _service.Handle(new CreateAccount(id, "someone"));
+            reply = _service.Handle(new DeposeCash(id, 200));
+            reply = _service.Handle(new SetOverdraftLimit(id, 200));
+            reply = _service.Handle(new WithdrawAmount(id, 450));
+            Assert.Throws<AggregateException>(() => _service.Handle(new DeposeCheque(id, 100)));
         }
 
         [Trait("Category", "Withdraw")]
@@ -204,10 +217,9 @@ namespace Account.DDD.Test
         public void Can_withdraw_amount()
         {
             var id = Guid.NewGuid();
-            var account = new TestAccount(id, "holder", new AccountCreated(id, "holder"));
-            account.Amount = 250;
-            account.WithdrawCash(150,new WithdrawnAmount(id,150));
-            Assert.Equal(100, account.Amount);
+            var reply = _service.Handle(new CreateAccount(id, "someone"));
+            Assert.Equal(typeof(Success), _service.Handle(new DeposeCash(id,100)).GetType());
+            Assert.Equal(typeof(Success), _service.Handle(new WithdrawAmount(id,50)).GetType());
         }
 
         [Trait("Category", "Withdraw")]
@@ -215,10 +227,10 @@ namespace Account.DDD.Test
         public void Cannot_withdraw_invalid_amount()
         {
             var id = Guid.NewGuid();
-            var account = new TestAccount(id, "holder", new AccountCreated(id, "holder"));
-            account.Amount = 250;
-            Assert.Throws<ArgumentException>(() => account.WithdrawCash(0, new WithdrawnAmount(id, 0)));
-            Assert.Throws<ArgumentException>(() => account.WithdrawCash(-120, new WithdrawnAmount(id, -120)));
+            var reply = _service.Handle(new CreateAccount(id, "someone"));
+            Assert.Equal(typeof(Success), _service.Handle(new DeposeCash(id, 200)).GetType());
+            Assert.Throws<ArgumentException>(() => _service.Handle(new WithdrawAmount(id, 0)));
+            Assert.Throws<ArgumentException>(() => _service.Handle(new WithdrawAmount(id, -120)));
         }
 
         [Trait("Category", "Withdraw")]
@@ -226,10 +238,10 @@ namespace Account.DDD.Test
         public void Cannot_withdraw_blocked_amount()
         {
             var id = Guid.NewGuid();
-            var account = new TestAccount(id, "holder", new AccountCreated(id, "holder"));
-            account.Amount = 250;
-            account.WithdrawCash(300,new WithdrawnAmount(id,300));
-            Assert.Throws<Exception>(() => account.WithdrawCash(20, new WithdrawnAmount(id, 20)));
+            var reply = _service.Handle(new CreateAccount(id, "someone"));
+            reply = _service.Handle(new DeposeCash(id, 200));
+            reply = _service.Handle(new WithdrawAmount(id, 300));
+            Assert.Throws<Exception>(() => _service.Handle(new WithdrawAmount(id, 20)));
         }
 
         [Trait("Category", "Wire transfer")]
@@ -237,11 +249,10 @@ namespace Account.DDD.Test
         public void Can_withdraw_through_wire_transferring()
         {
             var id = Guid.NewGuid();
-            var account = new TestAccount(id, "holder", new AccountCreated(id, "holder"));
-            account.Amount = 250;
-            account.SetDailyWireTransferLimit(300, new SettedWireTransferLimit(id,300));
-            account.TransferWire(200, new WireTransferred(id, 200));
-            Assert.Equal(50, account.Amount);
+            var reply = _service.Handle(new CreateAccount(id, "someone"));
+            reply = _service.Handle(new DeposeCash(id, 250));
+            reply = _service.Handle(new SetWireTransferLimit(id, 300));
+            Assert.Equal(typeof(Success), _service.Handle(new WireTransfer(id, 200)).GetType());
         }
 
         [Trait("Category", "Wire transfer")]
@@ -249,21 +260,21 @@ namespace Account.DDD.Test
         public void Cannot_withdraw_invalid_wire_transferring_values()
         {
             var id = Guid.NewGuid();
-            var account = new TestAccount(id, "holder", new AccountCreated(id, "holder"));
-            account.Amount = 250;
-            account.SetDailyWireTransferLimit(200, new SettedWireTransferLimit(id, 200));
-            Assert.Throws<ArgumentException>(() => account.TransferWire(-250, new WireTransferred(id, -250)));
+            var reply = _service.Handle(new CreateAccount(id, "someone"));
+            reply = _service.Handle(new DeposeCash(id, 250));
+            reply = _service.Handle(new SetWireTransferLimit(id, 200));
+            Assert.Throws<ArgumentException>(() => _service.Handle(new WireTransfer(id, -200)));
         }
 
-        [Trait("Category", "Wire transfer")] 
+        [Trait("Category", "Wire transfer")]
         [Fact]
         public void Cannot_wire_transfer_from_blocked_account()
         {
             var id = Guid.NewGuid();
-            var account = new TestAccount(id, "holder", new AccountCreated(id, "holder"));
-            account.SetDailyWireTransferLimit(100, new SettedWireTransferLimit(id,100));
-            account.Block(new Blocked(id));
-            Assert.Throws<Exception>(() => account.TransferWire(100, new WireTransferred(id, 100)));
+            var reply = _service.Handle(new CreateAccount(id, "someone"));
+            reply = _service.Handle(new SetWireTransferLimit(id, 100));
+            reply = _service.Handle(new BlockAccount(id));
+            Assert.Throws<Exception>(() => _service.Handle(new WireTransfer(id,100)));
         }
 
     }

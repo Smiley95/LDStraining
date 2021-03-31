@@ -1,42 +1,26 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">C:\Users\Etaieb\AppData\Local\Temp\JetBrains\ReSharperPlatformVs16\vAny_ac5de960\CoverageData\_BankAccountDDD.120167491\Snapshot\snapshot.utdcvr</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=2b542abd_002D055c_002D4d72_002Daffb_002Dababf36c0dc0/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="AccountTest #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=26a7da98_002Dd9f9_002D4d5b_002Dbf2c_002D688f25e3d1ac/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Cannot_depose_invalid_cheque_amount" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::D6AD132A-931A-4639-B097-FFAFB50B6024::.NETCoreApp,Version=v3.1::Account.DDD.Test.AccountTest.Cannot_depose_invalid_cheque_amount&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8caaf6c0_002D9c98_002D47a2_002Db347_002Dd11fedd82a09/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="AccountTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::D6AD132A-931A-4639-B097-FFAFB50B6024::.NETCoreApp,Version=v3.1::Account.DDD.Test.AccountTest&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::D6AD132A-931A-4639-B097-FFAFB50B6024::.NETCoreApp,Version=v3.1::Account.DDD.Test.EventsTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::D6AD132A-931A-4639-B097-FFAFB50B6024::.NETCoreApp,Version=v3.1::Account.DDD.Test.CommandsTests&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=69033042_002Dfcd2_002D4bc3_002D8a13_002Dc331ea65d013/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Can_depose_cheque #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::D6AD132A-931A-4639-B097-FFAFB50B6024::.NETCoreApp,Version=v3.1::Account.DDD.Test.AccountTest.Can_depose_cheque&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9d51b5dd_002D8aba_002D407e_002Db084_002D5098cf7582f2/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="EventsTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::D6AD132A-931A-4639-B097-FFAFB50B6024::.NETCoreApp,Version=v3.1::Account.DDD.Test.EventsTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::D6AD132A-931A-4639-B097-FFAFB50B6024::.NETCoreApp,Version=v3.1::Account.DDD.Test.AccountTest.Can_block_Account&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::D6AD132A-931A-4639-B097-FFAFB50B6024::.NETCoreApp,Version=v3.1::Account.DDD.Test.AccountTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a81d3f79_002De007_002D4ae9_002D8278_002Dffbaf5d281d4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="AccountTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::D6AD132A-931A-4639-B097-FFAFB50B6024::.NETCoreApp,Version=v3.1::Account.DDD.Test.AccountTest&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c6e94397_002D25de_002D4d50_002Da685_002D152239f54196/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="AccountTest #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::D6AD132A-931A-4639-B097-FFAFB50B6024::.NETCoreApp,Version=v3.1::Account.DDD.Test.AccountTest&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=dd461e9b_002Dc007_002D44cd_002D8367_002Df4cd3a4cad86/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Can_unblock_when_depose_cheque" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::D6AD132A-931A-4639-B097-FFAFB50B6024::.NETCoreApp,Version=v3.1::Account.DDD.Test.AccountTest.Can_unblock_when_depose_cheque&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e330f424_002Da597_002D4f89_002Db0ad_002D65d6fa64cfb7/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Can_depose_cheque" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::D6AD132A-931A-4639-B097-FFAFB50B6024::.NETCoreApp,Version=v3.1::Account.DDD.Test.AccountTest.Can_depose_cheque&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	</wpf:ResourceDictionary>

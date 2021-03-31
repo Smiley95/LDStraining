@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Linedata.Foundation" Version="1.0.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Linedata.Foundation.CommandReceiver" Version="2.0.21" />
+    <PackageReference Include="Linedata.Foundation.Discovery.Configuration" Version="2.0.29" />
+    <PackageReference Include="Linedata.Foundation.Messaging.Serialization.Protobuf" Version="4.1.9" />
+    <PackageReference Include="Linedata.Foundation.Messaging.Steeltoe" Version="4.1.9" />
+    <PackageReference Include="Linedata.Foundation.ServiceHosting" Version="4.1.7" />
+    <PackageReference Include="Linedata.Gateway.Common" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Accounts.Domain\Accounts.Domain.csproj" />
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

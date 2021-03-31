@@ -23,7 +23,9 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Users\\Etaieb\\Desktop\\Training\\Linedata.Foundation.Domain\\src\\EventSourcing": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://ln1ampart01.ad.linedata.com/api/nuget/nuget-snapshot/": {},
+          "https://packagesource": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -45,6 +47,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Linedata.Foundation.Domain.Messaging": {
+              "target": "Package",
+              "version": "[4.0.6, )"
+            },
+            "Linedata.Foundation.EventStorage.InMemory": {
+              "target": "Package",
+              "version": "[4.1.16, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.7.1, )"
@@ -104,7 +114,9 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Users\\Etaieb\\Desktop\\Training\\Linedata.Foundation.Domain\\src\\EventSourcing": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://ln1ampart01.ad.linedata.com/api/nuget/nuget-snapshot/": {},
+          "https://packagesource": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -121,6 +133,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Linedata.Foundation.EventStorage": {
+              "target": "Package",
+              "version": "[1.1.26, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

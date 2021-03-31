@@ -1,0 +1,9 @@
+C:\Users\Etaieb\Desktop\Training\MockOMS\Accounts.Domain\bin\Debug\netcoreapp3.1\Accounts.Domain.deps.json
+C:\Users\Etaieb\Desktop\Training\MockOMS\Accounts.Domain\bin\Debug\netcoreapp3.1\Accounts.Domain.dll
+C:\Users\Etaieb\Desktop\Training\MockOMS\Accounts.Domain\bin\Debug\netcoreapp3.1\Accounts.Domain.pdb
+C:\Users\Etaieb\Desktop\Training\MockOMS\Accounts.Domain\obj\Debug\netcoreapp3.1\Accounts.Domain.AssemblyInfoInputs.cache
+C:\Users\Etaieb\Desktop\Training\MockOMS\Accounts.Domain\obj\Debug\netcoreapp3.1\Accounts.Domain.AssemblyInfo.cs
+C:\Users\Etaieb\Desktop\Training\MockOMS\Accounts.Domain\obj\Debug\netcoreapp3.1\Accounts.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Etaieb\Desktop\Training\MockOMS\Accounts.Domain\obj\Debug\netcoreapp3.1\Accounts.Domain.dll
+C:\Users\Etaieb\Desktop\Training\MockOMS\Accounts.Domain\obj\Debug\netcoreapp3.1\Accounts.Domain.pdb
+C:\Users\Etaieb\Desktop\Training\MockOMS\Accounts.Domain\obj\Debug\netcoreapp3.1\Accounts.Domain.csprojAssemblyReference.cache

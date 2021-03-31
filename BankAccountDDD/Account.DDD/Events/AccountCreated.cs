@@ -8,11 +8,11 @@ namespace Account.DDD.Events
     public class AccountCreated : Event
     {
         public readonly string HolderName;
-        public readonly Guid AccountId;
+        public Guid AccountId { get; set; }
 
-        public AccountCreated(Guid id, string holderName)
+        public AccountCreated(Guid accountId, string holderName)
         {
-            AccountId = id;
+            AccountId = accountId;
             HolderName = holderName;
         }
     }

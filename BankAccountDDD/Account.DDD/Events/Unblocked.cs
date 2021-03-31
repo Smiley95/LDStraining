@@ -8,9 +8,9 @@ namespace Account.DDD.Events
     public class Unblocked : Event
     {
         public Guid UnblockedAccount;
-        public Unblocked(Guid id)
+        public Unblocked(Guid unblockedAccount)
         {
-            UnblockedAccount = id;
+            UnblockedAccount = unblockedAccount;
         }
     }
 }

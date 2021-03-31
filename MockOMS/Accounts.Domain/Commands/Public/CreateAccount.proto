@@ -1,0 +1,7 @@
+﻿syntax = "proto3";
+
+package Accounts.Domain;
+
+message CreateAccount {
+	int32 Amount = 1;
+}

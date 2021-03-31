@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.15.6" />
+    <PackageReference Include="Grpc.Tools" Version="2.36.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Linedata.Foundation" Version="1.0.18">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Linedata.Foundation.Domain.EventSourcing" Version="4.0.6" />
+    <PackageReference Include="Linedata.Foundation.Messaging.Core" Version="4.0.27" />
+    <PackageReference Include="Linedata.Foundation.Messaging.Protobuf" Version="3.0.6" />
+    <Protobuf Include="**/*.proto" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,8 @@
+﻿syntax = "proto3";
+
+package Accounts.Domain;
+
+message CreditAccount {
+	string AccountId = 1;
+	int32 Amount = 2;
+}

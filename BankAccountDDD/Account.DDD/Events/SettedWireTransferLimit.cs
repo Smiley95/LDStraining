@@ -9,9 +9,9 @@ namespace Account.DDD.Events
     {
         public readonly Guid AccountId;
         public readonly decimal NewLimit;
-        public SettedWireTransferLimit(Guid id, decimal newLimit)
+        public SettedWireTransferLimit(Guid accountId, decimal newLimit)
         {
-            AccountId = id;
+            AccountId = accountId;
             NewLimit = newLimit;
         }
     }

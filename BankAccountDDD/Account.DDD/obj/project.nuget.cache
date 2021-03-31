@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "JNqRLd4kV+SXsusNmpWhVhgKpgL1cAAZlYFkrZr1DgyqqltjYPPILhMGeaqiA+qDdultmjfTnOh/l3MfNz4eWg==",
+  "dgSpecHash": "C3p0HUwpYn7PUe/GV/d+hambdHSbb4fElelTA8taRRxhv4mDyhJdOphCTIyZg2ojGT9Vp7rt78pYDD3cVyXsNw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Etaieb\\Desktop\\Training\\BankAccountDDD\\Account.DDD\\Account.DDD.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Etaieb\\.nuget\\packages\\linedata.foundation.eventstorage\\1.1.26\\linedata.foundation.eventstorage.1.1.26.nupkg.sha512",
+    "C:\\Users\\Etaieb\\.nuget\\packages\\microsoft.csharp\\4.6.0\\microsoft.csharp.4.6.0.nupkg.sha512",
+    "C:\\Users\\Etaieb\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

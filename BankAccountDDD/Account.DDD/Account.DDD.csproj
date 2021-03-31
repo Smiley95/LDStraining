@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Linedata.Foundation.EventStorage" Version="1.1.26" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Linedata.Foundation.Domain.EventSourcing">
       <HintPath>..\..\Linedata.Foundation.Domain\src\EventSourcing\obj\Debug\netstandard2.0\Linedata.Foundation.Domain.EventSourcing.dll</HintPath>
     </Reference>
